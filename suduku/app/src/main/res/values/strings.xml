@@ -5,6 +5,7 @@
     <string name="Continue_label">Continue</string>
     <string name="about_label">About</string>
     <string name="exit_label">Exit</string>
+
     <string name="about_text">My sudoku Game, like any others SudokuGame Enjoy it</string>
     <string name="hello">Difficulty</string>
     <string name="easy_lable">Easy</string>
