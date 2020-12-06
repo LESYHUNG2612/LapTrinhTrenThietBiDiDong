@@ -5,7 +5,7 @@ public class Language {
     private  String name;
     private  String h1;
 
-    public  Language(int id, String name,String h1) {
+    public  Language(int id, String name) {
         this.id =id;
         this.name=name ;
         this.h1= h1;

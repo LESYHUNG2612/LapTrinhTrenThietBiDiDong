@@ -180,127 +180,14 @@
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                android:weightSum="8">
-
-                <Button
-                    android:id="@+id/btnChiaLayDu"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:onClick="btnChiaLayDu"
-                    android:text="%"
-                    android:textAlignment="center"
-                    android:textColorHighlight="@color/colorAccent"
-                    android:textSize="50dp" />
-
-                <Button
-                    android:id="@+id/btnSin"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:textColorHighlight="@color/colorAccent"
-                    android:textSize="30dp"
-                    android:text="Sin" />
-
-                <Button
-                    android:id="@+id/btnCos"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Cos"
-                    android:textAlignment="center"
-                    android:textColorHighlight="@color/colorAccent"
-                    android:textSize="30dp" />
-
-                <Button
-                    android:id="@+id/btnTan"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:textColorHighlight="@color/colorAccent"
-                    android:textSize="30dp"
-                    android:text="Tan" />
-            </LinearLayout>
+                android:weightSum="4"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                android:weightSum="4">
-
-                <Button
-                    android:id="@+id/btnLuyThua"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:textColorHighlight="@color/colorAccent"
-                    android:textSize="30dp"
-                    android:text="X^2" />
-
-                <Button
-                    android:id="@+id/btnLog"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:textColorHighlight="@color/colorAccent"
-                    android:textSize="30dp"
-                    android:text="Log" />
-
-                <Button
-                    android:id="@+id/button7"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Button" />
-
-                <Button
-                    android:id="@+id/button8"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Button" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="4">
-
-                <Button
-                    android:id="@+id/button9"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Button" />
-
-                <Button
-                    android:id="@+id/button10"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Button" />
-
-                <Button
-                    android:id="@+id/button11"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Button" />
-
-                <Button
-                    android:id="@+id/button12"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Button" />
-            </LinearLayout>
+                android:weightSum="4"/>
         </LinearLayout>
 
     </LinearLayout>
