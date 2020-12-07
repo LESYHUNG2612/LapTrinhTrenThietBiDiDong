@@ -9,28 +9,28 @@ import android.graphics.BitmapFactory;
  */
 public class Boom {
 
-    //bitmap object
+    // đối tượng bitmap
     private Bitmap bitmap;
 
-    //coordinate variables
+    // các biến tọa độ
     private int x;
     private int y;
 
-    //constructor
+    //Hàm
     public Boom(Context context) {
-        //getting boom image from drawable resource
+        // lấy hình ảnh bùng nổ từ tài nguyên có thể vẽ
         bitmap = BitmapFactory.decodeResource
                 (context.getResources(), R.drawable.boom);
 
-        //setting the coordinate outside the screen
-        //so that it won't shown up in the screen
-        //it will be only visible for a fraction of second
-        //after collission
+        // thiết lập tọa độ bên ngoài màn hình
+        // để nó không hiển thị trên màn hình
+        // nó sẽ chỉ hiển thị trong một phần giây
+        // sau khi collission
         x = -150;
         y = -150;
     }
 
-    //setters for x and y to make it visible at the place of collision
+    // bộ thiết lập cho x và y để hiển thị nó ở vị trí va chạm
     public void setX(int x) {
         this.x = x;
     }

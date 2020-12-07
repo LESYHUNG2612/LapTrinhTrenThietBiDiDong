@@ -19,9 +19,10 @@ import android.widget.Toast;
 public class MainActivity extends Activity implements View.OnClickListener {
 
 
-    //image button
+    //nút ảnh
     private ImageButton buttonPlay;
-    // the high score button
+
+    //nút điểm cao
     private ImageButton buttonScore;
 
     @Override
@@ -29,21 +30,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        //setting the orientation to landscape
+        // thiết lập hướng sang ngang
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
 
 
-        //getting the button
+        // lấy nút
         buttonPlay = (ImageButton) findViewById(R.id.buttonPlay);
 
-        //initializing the highscore button
+        // khởi tạo nút điểm cao
         buttonScore = (ImageButton) findViewById(R.id.buttonScore);
 
-        //setting the on click listener to high score button
+        // đặt nút lắng nghe sự kiện khi nhấp vào nút điểm cao
         buttonScore.setOnClickListener(this);
-        //setting the on click listener to play now button
+        //đặt nút lắng nghe sự kiện khi click vào nút play
         buttonPlay.setOnClickListener(this);
     }
 
@@ -53,11 +53,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         if(v==buttonPlay){
 
-            //the transition from MainActivity to GameActivity
+            // quá trình chuyển đổi từ MainActivity sang GameActivity
             startActivity(new Intent(MainActivity.this, GameActivity.class));
         }
         if(v==buttonScore){
-            //the transition from MainActivity to HighScore activity
+            // chuyển đổi từ hoạt động MainActivity sang HighScore
             startActivity(new Intent(MainActivity.this,HighScore.class));
         }
 
@@ -88,7 +88,4 @@ public class MainActivity extends Activity implements View.OnClickListener {
         alert.show();
 
     }
-
-
-
 }

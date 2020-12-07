@@ -12,14 +12,13 @@
 
     <TextView
 
-        android:text="sdfas"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="30dp"
-        android:id="@+id/textView" />
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30dp" />
 
     <TextView
 
@@ -28,10 +27,8 @@
         android:textSize="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:gravity="center"
-        android:id="@+id/textView2"
-        />
+        android:id="@+id/textView2"/>
 
     <TextView
 
@@ -41,8 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30dp"
-        android:id="@+id/textView3"
-        />
+        android:id="@+id/textView3" />
 
     <TextView
 
@@ -54,8 +50,4 @@
         android:textAlignment="center"
         android:id="@+id/textView4"
         />
-
-
-
-
 </LinearLayout>

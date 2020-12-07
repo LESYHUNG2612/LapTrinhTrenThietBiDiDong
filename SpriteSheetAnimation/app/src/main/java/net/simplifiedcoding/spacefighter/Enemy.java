@@ -27,7 +27,7 @@ public class Enemy {
     Context context;
     Activity activity;
 
-    //creating a rect object
+    // tạo một đối tượng trực tràng
     private Rect detectCollision;
 
     public Enemy(Context context, int screenX, int screenY) {
@@ -45,7 +45,7 @@ public class Enemy {
         x = screenX;
         y = generator.nextInt(maxY) - bitmap.getHeight();
 
-        //initializing rect object
+        // khởi tạo đối tượng trực tràng
         detectCollision = new Rect(x, y, bitmap.getWidth(), bitmap.getHeight());
     }
 
@@ -58,26 +58,22 @@ public class Enemy {
             x = maxX;
             y = generator.nextInt(maxY) - bitmap.getHeight();
         }
-
-
-
-        //Adding the top, left, bottom and right to the rect object
+        // Thêm trên cùng, trái, dưới và phải vào đối tượng trực tràng
         detectCollision.left = x;
         detectCollision.top = y;
         detectCollision.right = x + bitmap.getWidth();
         detectCollision.bottom = y + bitmap.getHeight();
-
-
     }
 
-    //adding a setter to x coordinate so that we can change it after collision
+
+    // thêm một setter vào tọa độ x để chúng ta có thể thay đổi nó sau khi va chạm
     public void setX(int x){
 
         this.x = x;
 
     }
 
-    //one more getter for getting the rect object
+    // một getter nữa để lấy đối tượng trực tràng
     public Rect getDetectCollision() {
         return detectCollision;
     }

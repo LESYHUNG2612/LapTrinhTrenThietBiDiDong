@@ -11,36 +11,36 @@ import android.view.Display;
 
 public class GameActivity extends AppCompatActivity {
 
-    //declaring gameview
+
+    // khai báo gameview
     private GameView gameView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //Getting display object
+        // Lấy đối tượng hiển thị
         Display display = getWindowManager().getDefaultDisplay();
 
-        //Getting the screen resolution into point object
+        // Lấy độ phân giải màn hình vào đối tượng điểm
         Point size = new Point();
         display.getSize(size);
 
-        //Initializing game view object
-        //this time we are also passing the screen size to the GameView constructor
+        // Khởi tạo đối tượng xem trò chơi
+        // lần này chúng ta cũng đang chuyển kích thước màn hình tới hàm tạo GameView
         gameView = new GameView(this, size.x, size.y);
 
-        //adding it to contentview
+        // thêm nó vào contentview
         setContentView(gameView);
     }
 
-    //pausing the game when activity is paused
+    // tạm dừng trò chơi khi tạm dừng hoạt động
     @Override
     protected void onPause() {
         super.onPause();
         gameView.pause();
     }
-
-    //running the game when activity is resumed
+    // chạy trò chơi khi hoạt động được tiếp tục
     @Override
     protected void onResume() {
         super.onResume();
@@ -70,9 +70,5 @@ public class GameActivity extends AppCompatActivity {
                 });
         AlertDialog alert = builder.create();
         alert.show();
-
     }
-
-
-
 }

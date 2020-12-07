@@ -25,21 +25,21 @@ public class Star {
         Random generator = new Random();
         speed = generator.nextInt(10);
 
-        //generating a random coordinate
-        //but keeping the coordinate inside the screen size
+        // tạo một tọa độ ngẫu nhiên
+        // nhưng vẫn giữ tọa độ bên trong kích thước màn hình
         x = generator.nextInt(maxX);
         y = generator.nextInt(maxY);
     }
 
     public void update(int playerSpeed) {
-        //animating the star horizontally left side
-        //by decreasing x coordinate with player speed
+        // tạo hoạt ảnh ngôi sao theo chiều ngang bên trái
+        // bằng cách giảm tọa độ x với tốc độ của người chơi
         x -= playerSpeed;
         x -= speed;
-        //if the star reached the left edge of the screen
+        // nếu ngôi sao đến mép trái của màn hình
         if (x < 0) {
-            //again starting the star from right edge
-            //this will give a infinite scrolling background effect
+            // lại bắt đầu ngôi sao từ cạnh phải
+            // điều này sẽ tạo ra hiệu ứng nền cuộn vô hạn
             x = maxX;
             Random generator = new Random();
             y = generator.nextInt(maxY);
@@ -48,8 +48,8 @@ public class Star {
     }
 
     public float getStarWidth() {
-        //Making the star width random so that
-        //it will give a real look
+        // Tạo chiều rộng dấu sao ngẫu nhiên để
+        // nó sẽ cho một cái nhìn thực sự
         float minX = 1.0f;
         float maxX = 4.0f;
         Random rand = new Random();

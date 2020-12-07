@@ -28,30 +28,29 @@ public class GameView extends SurfaceView implements Runnable {
     private Thread gameThread = null;
     private Player player;
 
-    //a screenX holder
+    //a screenX holder : giữ holder
     int screenX;
 
-
-    //context to be used in onTouchEvent to cause the activity transition from GameAvtivity to MainActivity.
+    // ngữ cảnh được sử dụng trong onTouchEvent để chuyển đổi hoạt động from GameAvtivity to MainActivity.
     Context context;
 
-    //the score holder
+    // người ghi điểm
     int score;
 
-    //the high Scores Holder
+    //lịch sử điểm cao
     int highScore[] = new int[4];
 
-    //Shared Prefernces to store the High Scores
+
+    // Chia sẻ để lưu trữ Điểm cao
     SharedPreferences sharedPreferences;
 
 
     //to count the number of Misses
     int countMisses;
 
-    //indicator that the enemy has just entered the game screen
+    // chỉ báo rằng kẻ thù vừa vào màn hình trò chơi
     boolean flag ;
-
-    //an indicator if the game is Over
+    // chỉ báo nếu trò chơi kết thúc
     private boolean isGameOver ;
 
     private Paint paint;
@@ -60,19 +59,19 @@ public class GameView extends SurfaceView implements Runnable {
 
     private Enemy enemies;
 
-
-
-    //created a reference of the class Friend
+    //tạo một tham chiếu của lớp Friend
     private Friend friend;
 
 
     private ArrayList<Star> stars = new
             ArrayList<Star>();
 
-    //defining a boom object to display blast
+    // xác định đối tượng boom để hiển thị blast
     private Boom boom;
 
-    //the mediaplayer objects to configure the background music
+
+    // các đối tượng của trình trung gian để định cấu hình nhạc nền
+    // trình phát trung gian objects to configure the background music
     static  MediaPlayer gameOnsound;
 
     final MediaPlayer killedEnemysound;
@@ -89,7 +88,7 @@ public class GameView extends SurfaceView implements Runnable {
         surfaceHolder = getHolder();
         paint = new Paint();
 
-        //initializing context
+        // khởi tạo ngữ cảnh
         this.context = context;
 
         int starNums = 100;
@@ -103,16 +102,14 @@ public class GameView extends SurfaceView implements Runnable {
 
         enemies = new Enemy(context,screenX,screenY);
 
-        //initializing boom object
+        // khởi tạo đối tượng boom
         boom = new Boom(context);
-
-        //initializing the Friend class object
+        // khởi tạo đối tượng lớp Friend
         friend = new Friend(context, screenX, screenY);
-
-        //setting the score to 0 initially
+        // ban đầu đặt điểm thành 0
         score = 0;
 
-        //setting the countMisses to 0 initially
+        // cài đặt countMisses thành 0 ban đầu
         countMisses = 0;
 
 
@@ -121,24 +118,22 @@ public class GameView extends SurfaceView implements Runnable {
 
         isGameOver = false;
 
-
-        //initializing shared Preferences
+        // khởi tạo Preferences được chia sẻ
         sharedPreferences = context.getSharedPreferences("SHAR_PREF_NAME",Context.MODE_PRIVATE);
 
 
-        //initializing the array high scores with the previous values
+        // khởi tạo điểm số cao của mảng với các giá trị trước đó
        highScore[0] = sharedPreferences.getInt("score1",0);
        highScore[1] = sharedPreferences.getInt("score2",0);
        highScore[2] = sharedPreferences.getInt("score3",0);
        highScore[3] = sharedPreferences.getInt("score4",0);
 
-
-        //initializing the media players for the game sounds
+       // khởi tạo trình phát đa phương tiện cho âm thanh trò chơi
        gameOnsound = MediaPlayer.create(context,R.raw.gameon);
         killedEnemysound = MediaPlayer.create(context,R.raw.killedenemy);
         gameOversound = MediaPlayer.create(context,R.raw.gameover);
 
-        //starting the music to be played across the game
+        // khởi tạo đa phương tiện phát cho trò chơi âm thanh
         gameOnsound.start();
 
     }

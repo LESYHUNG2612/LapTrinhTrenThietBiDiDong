@@ -24,7 +24,7 @@ public class Friend {
     private int maxY;
     private int minY;
 
-    //creating a rect object for a friendly ship
+    // tạo một đối tượng trực tràng cho một con tàu thân thiện
     private Rect detectCollision;
 
 
@@ -39,7 +39,7 @@ public class Friend {
         x = screenX;
         y = generator.nextInt(maxY) - bitmap.getHeight();
 
-        //initializing rect object
+        // khởi tạo đối tượng trực tràng
         detectCollision = new Rect(x, y, bitmap.getWidth(), bitmap.getHeight());
     }
 
@@ -53,15 +53,13 @@ public class Friend {
             y = generator.nextInt(maxY) - bitmap.getHeight();
         }
 
-        //Adding the top, left, bottom and right to the rect object
+        // Thêm trên cùng, trái, dưới và phải vào đối tượng trực tràng
         detectCollision.left = x;
         detectCollision.top = y;
         detectCollision.right = x + bitmap.getWidth();
         detectCollision.bottom = y + bitmap.getHeight();
     }
-
-
-    //one more getter for getting the rect object
+    // một getter nữa để lấy đối tượng trực tràng
     public Rect getDetectCollision() {
         return detectCollision;
     }

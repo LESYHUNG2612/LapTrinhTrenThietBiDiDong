@@ -31,7 +31,7 @@ public class Player {
         minY = 0;
         boosting = false;
 
-        //initializing rect object
+        // khởi tạo đối tượng trực tràng
         detectCollision =  new Rect(x, y, bitmap.getWidth(), bitmap.getHeight());
     }
 
@@ -75,7 +75,7 @@ public class Player {
 
     }
 
-    //one more getter for getting the rect object
+    // một getter nữa để lấy đối tượng trực tràng
     public Rect getDetectCollision() {
         return detectCollision;
     }
